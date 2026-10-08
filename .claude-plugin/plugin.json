@@ -1,0 +1,53 @@
+{
+  "name": "diagrams",
+  "version": "0.1.0",
+  "description": "Pins the diagrams Claude draws to a chip above the prompt: expand it in place, open it full screen or in the browser, and see it as a rendered picture",
+  "author": {
+    "name": "Tomas Varga",
+    "url": "https://github.com/tomasvarga"
+  },
+  "homepage": "https://github.com/tomasvarga/claude-code-diagrams",
+  "repository": "https://github.com/tomasvarga/claude-code-diagrams",
+  "license": "MIT",
+  "keywords": [
+    "diagrams",
+    "mermaid",
+    "ascii",
+    "claude-code-mod"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "palette": {
+      "type": "string",
+      "title": "Palette",
+      "description": "terminal follows your terminal's own colors; the presets paint a fixed palette whatever Claude Code's theme is",
+      "default": "terminal",
+      "options": [
+        "terminal",
+        "solarized-light",
+        "solarized-dark"
+      ]
+    },
+    "pictures": {
+      "type": "string",
+      "title": "Pictures",
+      "description": "on: Claude adds a Mermaid version of each diagram and the mod renders it as a picture where the terminal shows images (Ghostty, kitty, WezTerm), using mmdc or the pinned @mermaid-js/mermaid-cli through npx",
+      "default": "off",
+      "options": [
+        "off",
+        "on"
+      ]
+    },
+    "fullScreenPalette": {
+      "type": "string",
+      "title": "Full screen palette",
+      "description": "same uses the Palette above; a preset paints only the full-screen pane, the card keeping its own colors",
+      "default": "same",
+      "options": [
+        "same",
+        "solarized-light",
+        "solarized-dark"
+      ]
+    }
+  }
+}

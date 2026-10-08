@@ -1,0 +1,14 @@
+{
+  "name": "claude-code-diagrams",
+  "owner": {
+    "name": "Tomas Varga",
+    "url": "https://github.com/tomasvarga"
+  },
+  "plugins": [
+    {
+      "name": "diagrams",
+      "source": "./",
+      "description": "Pins the diagrams Claude draws to a chip above the prompt: expand it in place, open it full screen or in the browser, and see it as a rendered picture"
+    }
+  ]
+}
