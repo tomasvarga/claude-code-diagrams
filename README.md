@@ -2,9 +2,9 @@
 
 **A Claude Code mod for the diagrams Claude draws.** Every box-and-arrow diagram in a reply gets pinned to a small chip above the prompt. Expand it in place, open it full screen, see it as a rendered Mermaid picture, or open it in the browser to zoom, copy and share.
 
-![Demo: Claude draws a diagram, the chip appears, the card expands, the browser view zooms and switches themes](docs/demo.gif)
+![Demo: Claude draws a diagram, the chip appears, the card expands, the browser view zooms and switches themes](docs/demo-callouts.gif)
 
-<sub>[Watch the MP4](docs/demo.mp4)</sub>
+<sub>[Watch the MP4](docs/demo-callouts.mp4)</sub>
 
 ## Why
 
