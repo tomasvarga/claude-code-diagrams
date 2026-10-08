@@ -14,7 +14,7 @@ If you ask Claude for diagrams often (architecture, request flows, state machine
 - **Expand in place.** The card shows the whole diagram, and ‹ prev / next › walks the session's history.
 - **Full screen.** The diagram gets a pane of its own, scrolls sideways when it's wide, and zooms your herdr or tmux pane.
 - **Pictures.** Optionally, Claude also writes each diagram in Mermaid, and the mod renders it as a picture in terminals that can show images (kitty, Ghostty, WezTerm).
-- **Browser.** A clean, self-contained page with zoom, the picture or the text as a blueprint, light and dark themes, and copy buttons.
+- **Browser.** A clean, self-contained page with zoom, the picture or the plain text, light and dark themes, and copy buttons.
 - **Copy for Slack, GitHub and Notion.** The text is copied fenced, so it stays monospace, and the picture is copied as an image.
 
 | Card above the prompt | Browser, light | Browser, dark |

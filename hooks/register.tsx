@@ -651,14 +651,12 @@ function page(diagram: Diagram, picture?: string) {
     --bg: #f7f6f3; --dots: #e4e1da; --surface: #ffffff; --text: #1d1f23; --muted: #6f737a;
     --line: #e7e4dd; --hover: #f1efea; --accent: #d0602a; --paper: #ffffff;
     --bar: rgb(255 255 255 / .9); --bar-line: #e2dfd8; --bar-text: #4d5158; --bar-hover: #f1efea;
-    --print: #1f5aa6; --print-grid: rgb(255 255 255 / .09); --print-grid-major: rgb(255 255 255 / .16); --print-ink: #eef5ff;
     color-scheme: light;
   }
   :root[data-theme="dark"] {
     --bg: #121316; --dots: #26282d; --surface: #1c1e22; --text: #f2f2f0; --muted: #a9adb4;
     --line: #34373e; --hover: #2a2d33; --accent: #f08a58; --paper: #fbfaf7;
     --bar: #33373e; --bar-line: #4a4f57; --bar-text: #e4e6ea; --bar-hover: #474c55;
-    --print: #0f2c52; --print-grid: rgb(140 190 255 / .08); --print-grid-major: rgb(140 190 255 / .15); --print-ink: #d8e8ff;
     color-scheme: dark;
   }
   @media (prefers-color-scheme: dark) {
@@ -666,7 +664,6 @@ function page(diagram: Diagram, picture?: string) {
       --bg: #121316; --dots: #26282d; --surface: #1c1e22; --text: #f2f2f0; --muted: #a9adb4;
       --line: #34373e; --hover: #2a2d33; --accent: #f08a58; --paper: #fbfaf7;
       --bar: #33373e; --bar-line: #4a4f57; --bar-text: #e4e6ea; --bar-hover: #474c55;
-      --print: #0f2c52; --print-grid: rgb(140 190 255 / .08); --print-grid-major: rgb(140 190 255 / .15); --print-ink: #d8e8ff;
       color-scheme: dark;
     }
   }
@@ -690,17 +687,10 @@ function page(diagram: Diagram, picture?: string) {
   }
   /* The picture is drawn dark on transparent: it sits on paper in both themes. */
   img { display: block; padding: 24px; background: var(--paper); -webkit-user-drag: none; }
-  /* The text as a blueprint: pale ink on blue, a fine grid with a heavier one every fifth line. */
+  /* The text on the plain sheet, in the page's own ink. */
   pre {
-    margin: 0; padding: 28px 32px; color: var(--print-ink); background-color: var(--print);
-    background-image:
-      linear-gradient(var(--print-grid-major) 1px, transparent 1px),
-      linear-gradient(90deg, var(--print-grid-major) 1px, transparent 1px),
-      linear-gradient(var(--print-grid) 1px, transparent 1px),
-      linear-gradient(90deg, var(--print-grid) 1px, transparent 1px);
-    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    margin: 0; padding: 28px 32px; color: var(--text); background: var(--surface);
     font: 14px/1.35 ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
-    text-shadow: 0 0 6px rgb(200 225 255 / .25);
   }
   .hidden { display: none; }
   nav {
