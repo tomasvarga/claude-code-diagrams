@@ -13,7 +13,7 @@ If you ask Claude for diagrams often (architecture, request flows, state machine
 - **A chip, not a pane.** A quiet chip on the right above the prompt shows the last diagram's title. While Claude works it shrinks to a pulsing ◆ and stays out of the way.
 - **Expand in place.** The card shows the whole diagram, and ‹ prev / next › walks the session's history.
 - **Full screen.** The diagram gets a pane of its own, scrolls sideways when it's wide, and zooms your herdr or tmux pane.
-- **Pictures.** Optionally, Claude also writes each diagram in Mermaid, and the mod renders it as a picture in terminals that can show images (kitty, Ghostty, WezTerm).
+- **Pictures.** Claude also writes each diagram in Mermaid, and the mod renders it as a picture in terminals that can show images (kitty, Ghostty, WezTerm).
 - **Browser.** A clean, self-contained page with zoom, the picture or the plain text, light and dark themes, and copy buttons.
 - **Copy for Slack, GitHub and Notion.** The text is copied fenced, so it stays monospace, and the picture is copied as an image.
 
@@ -46,11 +46,11 @@ Change them with `/config` → **diagrams**.
 | --- | --- | --- |
 | **Palette** | `terminal` (default), `solarized-light`, `solarized-dark` | `terminal` uses your terminal's own colors. A preset paints the card in fixed colors, whatever Claude Code's theme is. |
 | **Full screen palette** | `same` (default), `solarized-light`, `solarized-dark` | Gives only the full-screen pane its own palette. |
-| **Pictures** | `off` (default), `on` | Claude adds a Mermaid version of each diagram, and the mod renders it as a picture. |
+| **Pictures** | `on` (default), `off` | Claude adds a Mermaid version of each diagram, and the mod renders it as a picture. `off` keeps replies shorter and skips the renderer. |
 
 ## Pictures
 
-With **Pictures** on, the mod renders Mermaid using `mmdc` if it's installed. Otherwise it uses the pinned `@mermaid-js/mermaid-cli` through `npx`. The first render downloads the renderer and a headless Chrome, which takes about a minute. After that, a render takes about a second.
+The mod renders Mermaid using `mmdc` if it's installed. Otherwise it uses the pinned `@mermaid-js/mermaid-cli` through `npx`. The first render downloads the renderer and a headless Chrome, which takes about a minute. After that, a render takes about a second.
 
 The picture shows in terminals that speak the kitty graphics protocol: kitty, Ghostty and WezTerm. Elsewhere the card shows the text.
 

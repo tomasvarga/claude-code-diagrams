@@ -101,7 +101,7 @@ export const register: Register = (on, options) => {
   const S = PALETTES[String(options.palette)] ?? PALETTES.terminal!
   // Full screen can wear its own palette, the card keeping the terminal's colors.
   const fullS = PALETTES[String(options.fullScreenPalette)] ?? S
-  const isPictures = options.pictures === 'on'
+  const isPictures = options.pictures !== 'off'
   const theme = String(options.palette).endsWith('dark') ? 'dark' : 'neutral'
   let revealing: Timer | undefined
   let pulsing: Timer | undefined

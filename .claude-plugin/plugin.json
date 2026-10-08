@@ -32,7 +32,7 @@
       "type": "string",
       "title": "Pictures",
       "description": "on: Claude adds a Mermaid version of each diagram and the mod renders it as a picture where the terminal shows images (Ghostty, kitty, WezTerm), using mmdc or the pinned @mermaid-js/mermaid-cli through npx",
-      "default": "off",
+      "default": "on",
       "options": [
         "off",
         "on"
